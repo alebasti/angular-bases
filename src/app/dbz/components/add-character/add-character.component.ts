@@ -10,13 +10,14 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class AddCharacterComponent {
 
-    @Output()
-    public onNewCharacter: EventEmitter<Character> = new EventEmitter();
+  @Output()
+  public onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
   public character: Character = {
     name: '',
     power: 0,
   };
+
 
   emiteCharacter():void{
 
@@ -26,6 +27,7 @@ export class AddCharacterComponent {
     this.onNewCharacter.emit(this.character)
     
     this.character = {name: '', power: 0};
+    
   }
   
 
